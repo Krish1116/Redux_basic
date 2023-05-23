@@ -5,12 +5,13 @@ const redux = require("redux");
 const counterReducer1 = (state = { counter: 0 }, action) => {
   if (action.type === "increment")
     return {
-      counter: state.counter + 1,
+      counter: state.counter + 2,
     };
   if (action.type === "decrement")
     return {
-      counter: state.counter - 1,
+      counter: state.counter - 2,
     };
+  return state;
 };
 
 // store needs to know which reducer is responsible for changing that store bcz reducer which is works togather with the store
